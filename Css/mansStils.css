@@ -1,0 +1,19 @@
+.w3-top {z-index: 9999999999999;}
+.w3-bar { background-color: black; width: 100%; z-index: 1000; }
+.w3-bar-item { color: white; }
+.dropdown { position: relative; display: inline-block; }
+.dropdown-content { display: none; position: absolute; background-color: white; min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1200; }
+.dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
+.dropdown-content a:hover { background-color: #ddd; }
+.show { display: block; }
+.content-section { width: 80%; margin: 100px auto 20px auto; padding: 20px; position: relative; z-index: 500; margin-top: 10%;}
+.content { width: 500px; height: 500px; margin: 100px auto 20px auto; padding: 20px; border: 5px solid grey; position: relative; z-index: 500; margin-top: 50px; margin-left: 10%;}
+.anchor { position: absolute; top: -80px; visibility: hidden; }
+.name {width:100%;min-height:350px;max-height:500px;display: block; margin-left: auto; margin-right: auto;}
+p.header {margin-left: 100px; font-size: 0.65cm; text-indent: 2%;}
+p {margin-left: 25px; font-size: 0.5cm; text-indent: 2%;}
+li {font-size: 0.5cm;}
+h1 {text-align: center; font-weight: bold; font-size: 2cm;}
+img {display: block; margin-left: auto; margin-right: auto; height: 800px;}
+.tableP {font-size: 0.5cm;}
+body {background-color: lightgray;}
