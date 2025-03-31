@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informācijas daudzuma mērvienības</title>
+    <style>
+        form {background-color: rgb(220, 220, 0); font-size:20px; }
+        body {background-image: url('images/cipari.jpg');}
+    </style>
+</head>
+<body>
+<h1>Informācijas daudzuma mērvienības</h1>    
+
+<form>
+    <p><input type="text" name="GB" placeholder="Ievadi GB">GB = <br></p>
+    <p><input type="button" value="Izteikt megabaitos" onclick="konverts();">
+    <input type="text" name="MB" readonly>MB<br></p>
+    <p><input type="button" value="Izteikt mebibaitos" onclick="konverts();">
+    <input type="text" name="MiB" readonly> MiB<br></p>
+</form>
+<script>
+    function konverts() { 
+        let GB = document.getElementsByName('GB')[0].value;
+        let MB = GB * 1024;
+        let MiB = GB * 1024 * 1.024;
+        document.getElementsByName('MB')[0].value = MB;
+        document.getElementsByName('MiB')[0].value = MiB;}
+</script> 
+</body>
+</html>

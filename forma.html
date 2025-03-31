@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas</title>
+    <style>
+
+
+    form {
+      margin-top: 40px;}
+ 
+
+    input[type="button"] {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #21f3b4;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;}
+    input[type="button"]:hover {
+      background-color: #4bf321;}
+  
+  body {text-align:center;}
+        
+    p {margin: 10px 0;}
+
+    input[type="text"],
+    input[type="button"],
+    input[type="reset"] {
+      padding: 10px;
+      margin: 5px 0;
+      border: 2px solid #ccc;
+      border-radius: 5px;}
+
+    input[name="datums"] {
+      width: 350px;
+      font-size: 20px;}
+   
+  
+    </style>
+</head>
+<body>
+
+
+<form>
+      <p>Šodienas datums: <input name="datums" type="text" readonly></p>
+      <p>
+        Kāds šodien datums? Uzspiet pogu DATUMS un uzzināsi
+        <input onclick="datums.value=new Date();" name="poga" value="DATUMS" type="button">
+      </p>
+      <p>
+       Apnika skatīties uz šodienas datumu? Uzspied pogu RESET, lai to izdzēstu
+        <input value="RESET" type="reset">
+      </p>
+</form>
+  <form name="calc">
+      <div>1. skaitlis: <input type="text" name="s1"></div>
+      <div>2. skaitlis: <input type="text" name="s2"></div>
+      <div>
+        <input value="+" onclick="calc.rez.value=Number(calc.s1.value)+Number(calc.s2.value)" type="button">
+        <input value="-" onclick="calc.rez.value=Number(calc.s1.value)-Number(calc.s2.value)" type="button">
+        <input value="X" onclick="calc.rez.value=Number(calc.s1.value)*Number(calc.s2.value)" type="button">
+        <input value="/" onclick="calc.rez.value=Number(calc.s1.value)/Number(calc.s2.value)" type="button">
+        <input value="RESET" type="reset">
+      </div>
+      <div>Rezultāts: <input name="rez" type="text" readonly></div>
+    </form>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gaidot dzimšanas dienu..</title>
+    <link rel="stylesheet" href="Css/mansStils.css">
+    <style>
+        div {text-align: center;}
+        form {font-size: 0.5cm;}
+        h2 {font-size: 1cm;}
+    </style>
+</head>
+<body>
+    <h1>Gaidot dzimšanas dienu..</h1>
+    <hr>
+    <div>
+        <h2>Ievadi pilnu datumu, kad tev būs tuvākā dzimšanas diena</h2>
+        <form>
+            Gads: <input type="text" id="gads"><br>
+            Mēnesis: <input type="text" id="menesis"><br>
+            Diena: <input type="text" id="datums"><br>
+            <button type="button" onclick="dienas();">Aprēķināt dienu skaitu līdz dzimšanas dienai</button>
+        </form>
+        <p>Līdz svētkiem atlikušas <input type="text" id="dienas" readonly> dienas :)</p>
+    </div>
+    <script>
+        function dienas() {
+            var gads = parseInt(document.getElementById("gads").value);
+            var menesis = parseInt(document.getElementById("menesis").value);
+            var diena = parseInt(document.getElementById("datums").value);
+            
+            if (isNaN(gads) || isNaN(menesis) || isNaN(diena) || gads < 1900 || menesis < 1 || menesis > 12 || diena < 1 || diena > 31) {
+                alert("Lūdzu ievadiet derīgu datumu!");
+                return;
+            }
+            
+            var today = new Date();
+            var currentYear = today.getFullYear();
+            var nextBirthday = new Date(currentYear, menesis - 1, diena);
+            
+            if (nextBirthday < today) {
+                nextBirthday.setFullYear(currentYear + 1);
+            }
+            
+            var diffTime = nextBirthday - today;
+            var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
+            document.getElementById("dienas").value = diffDays;
+        }
+    </script>
+</body>
+</html>
