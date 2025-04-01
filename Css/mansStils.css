@@ -15,5 +15,6 @@ p {margin-left: 25px; font-size: 0.5cm; text-indent: 2%;}
 li {font-size: 0.5cm;}
 h1 {text-align: center; font-weight: bold; font-size: 2cm;}
 img {display: block; margin-left: auto; margin-right: auto; height: 800px;}
+.rastra { height: 400px; width: 700px;}
 .tableP {font-size: 0.5cm;}
 body {background-color: lightgray;}
