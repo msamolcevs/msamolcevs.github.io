@@ -14,7 +14,7 @@ p.header {margin-left: 100px; font-size: 0.65cm; text-indent: 2%;}
 p {margin-left: 25px; font-size: 0.5cm; text-indent: 2%;}
 li {font-size: 0.5cm;}
 h1 {text-align: center; font-weight: bold; font-size: 2cm;}
-img {display: block; margin-left: auto; margin-right: auto; height: 800px;}
-.rastra { height: 400px; width: 700px;}
+img {display: block; margin-left: auto; margin-right: auto; height: 30vw;}
+.rastra { width: 25vw; height: auto;}
 .tableP {font-size: 0.5cm;}
 body {background-color: lightgray;}
